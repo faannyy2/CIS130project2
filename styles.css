@@ -1,0 +1,219 @@
+/* 
+  styles.css
+  External stylesheet for CIS 130 Project 2
+  – Used Grid layout, responsive image, two fonts, hover states, and basic accessibility.
+*/
+
+/* RESET SIMPLE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY + FONTS */
+body {
+    font-family: "Roboto", Arial, sans-serif; /* Content font */
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+/* HEADINGS FONT */
+h1, h2 {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif; /* Heading font */
+}
+
+/* HEADER */
+.site-header {
+    background-color: #123456;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.site-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: #ffffff;
+    color: #123456;
+    outline: 2px solid #ffffff;
+}
+
+/* MAIN GRID LAYOUT */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* CARD STYLE (SECTIONS) */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+/* ABOUT SECTION */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+/* Responsive candidate photo */
+.candidate-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.candidate-photo figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* BIO + PRIORITIES */
+.bio {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.priorities {
+    margin-left: 1.2rem;
+    list-style-type: disc;
+}
+
+/* DONATION SECTION */
+.donation-section p {
+    margin-bottom: 1rem;
+}
+
+/* VOLUNTEER FORM */
+.volunteer-section p {
+    margin-bottom: 1rem;
+}
+
+.volunteer-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    font-size: 0.95rem;
+}
+
+/* BUTTONS (ALL) */
+.btn {
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Primary button (Donate) */
+.primary-btn {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+/* Secondary button (Volunteer) */
+.secondary-btn {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+/* HOVER + FOCUS STATES – COLOR CHANGE */
+.btn:hover,
+.btn:focus {
+    background-color: #2c3e50;
+    color: #ffffff;
+    outline: 2px solid #2c3e50;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #123456;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: #ffdd55;
+    text-decoration: underline;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #ffffff;
+}
+
+/* RESPONSIVE DESIGN – MOBILE / SMALL SCREENS */
+@media (max-width: 800px) {
+    .layout-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
+
+    .about-content {
+        grid-template-columns: 1fr; /* Image above text on small screens */
+    }
+
+    .site-header h1 {
+        font-size: 1.7rem;
+    }
+}
